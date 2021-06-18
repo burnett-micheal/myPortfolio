@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
+import axios from "axios";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+
+  componentDidMount(){
+    const config = {
+      method: "POST",
+      url: "https://psiteapi.azure-api.net/api/demo/ReactTest",
+      headers: {"Ocp-Apim-Subscription-Key":"9fc0d4d53a3a41e89ca863de5b2f4668"}
+    }
+    axios(config).then(response => {console.log(response);});
+  }
+
+  render() {
+    return (<p>Display This</p>)
+  }}
 
 export default App;
