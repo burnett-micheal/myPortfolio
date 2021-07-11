@@ -1,19 +1,35 @@
 import React, {Component} from "react";
-import axios from "axios";
+import {Box} from '@material-ui/core';
+import AboutMe from "./Components/AboutMe/AboutMe";
+import PortfolioCard from "./Components/PortfolioCard/PortfolioCard";
+import NavBar from "./Components/NavBar/NavBar";
+import Closing from "./Components/Closing/Closing";
 
 class App extends Component {
 
+
   componentDidMount(){
-    const config = {
-      method: "POST",
-      url: "https://psiteapi.azure-api.net/api/demo/ReactTest",
-      headers: {"Ocp-Apim-Subscription-Key":"9fc0d4d53a3a41e89ca863de5b2f4668"}
-    }
-    axios(config).then(response => {console.log(response);});
+    document.body.style["background"] = "#00001a";
   }
 
   render() {
-    return (<p>Display This</p>)
+    return (
+    <Box>
+      <NavBar />
+
+      <AboutMe />
+
+      <Box display="flex" flexWrap="wrap">
+        <PortfolioCard />
+        <PortfolioCard />
+        <PortfolioCard />
+        <PortfolioCard />
+      </Box>
+
+      <Closing />
+
+    </Box>
+    )
   }}
 
 export default App;
