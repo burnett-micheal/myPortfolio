@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 const PortCard = styled.div`
-  border-style: solid;
-  border-width: 0.15vw;
-  border-color: #ffe600;
   position: relative;
   width: 45.2%;
   margin-left: 3%;
   margin-bottom: 3%;
+  margin-top: 5%;
 
   top: 0px;
   transition: top ease 0.4s;
@@ -31,11 +29,19 @@ const PortCard = styled.div`
 `;
 
 const Vid = styled.video`
+  border-style: solid;
+  border-width: 0.15vw;
+  border-color: black;
+  border-radius: 0.75vw;
   width: 100%;
   z-index: -1;
 `;
 
 const Img = styled.img`
+  border-style: solid;
+  border-width: 0.15vw;
+  border-color: black;
+  border-radius: 0.75vw;
   position: absolute;
   width: 100%;
   z-index: 0;
@@ -79,6 +85,7 @@ const Overlay = styled.div`
 
     return result;
   }}
+  border-radius: 0.3vw;
   color: white;
   background: black;
   margin: 1%;

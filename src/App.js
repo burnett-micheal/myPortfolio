@@ -1,35 +1,49 @@
 import React, {Component} from "react";
 import {Box} from '@material-ui/core';
-import AboutMe from "./Components/AboutMe/AboutMe";
-import PortfolioCard from "./Components/PortfolioCard/PortfolioCard";
-import NavBar from "./Components/NavBar/NavBar";
-import Closing from "./Components/Closing/Closing";
+import BlogsDisplay from "./Components/BlogsDisplay/BlogsDisplay";
+import Blog from "./Components/Blog/Blog";
+import Landing from "./Components/Landing/Landing";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import {
+  withRouter,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 class App extends Component {
 
-
   componentDidMount(){
-    document.body.style["background"] = "#00001a";
+    if(this.getPath().length === 0){
+      window.location.pathname = "home";
+    }
+  }
+
+  getPath = () => {
+    const result = window.location.pathname.split("/").filter((i) => {
+      return i !== "";
+    });
+    return result;
   }
 
   render() {
     return (
     <Box>
-      <NavBar />
-
-      <AboutMe />
-
-      <Box display="flex" flexWrap="wrap">
-        <PortfolioCard />
-        <PortfolioCard />
-        <PortfolioCard />
-        <PortfolioCard />
-      </Box>
-
-      <Closing />
-
+      <Sidebar />
+        <Switch>
+          <Route path="/home">
+          <Landing />
+          </Route>
+          <Route path="/blogs">
+            <BlogsDisplay />
+          </Route>
+          <Route path="/blog">
+            <Blog />
+          </Route>
+        </Switch>
     </Box>
     )
   }}
 
-export default App;
+export default withRouter(App);
