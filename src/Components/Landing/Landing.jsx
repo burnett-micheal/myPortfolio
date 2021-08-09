@@ -39,7 +39,8 @@ class Landing extends Component {
               some additional libraries. During my time there I led daily
               standups, code reviews, meetings, and presentations for clients. I
               also have more personal experience using an array of technologies
-              such as Unity, Blender, GameMaker Studio, and Spigot.
+              such as Unity, Blender, GameMaker Studio, and Spigot. You can
+              contact me at burnett.micheal.business@gmail.com.
             </Text>
           </TextSection>
         </LandingCard>
