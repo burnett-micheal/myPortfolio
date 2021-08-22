@@ -12,7 +12,7 @@ import {
   Name,
   Specialty,
 } from "./LandingStyle";
-import LandingImg from "../../Assets/image/b.jpg";
+import LandingImg from "../../Assets/image/d.jpg";
 
 class Landing extends Component {
   componentDidMount() {

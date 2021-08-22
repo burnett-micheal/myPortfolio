@@ -7,7 +7,7 @@ const LandingCard = styled(Card)`
   margin-top: 2.5vw;
   margin-bottom: 1.5vw;
   width: 85vw;
-  background: linear-gradient(135deg, #dfecf1, #f6f8f9);
+  background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
   display: flex;
 `;
 

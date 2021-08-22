@@ -4,12 +4,11 @@ import BlogsDisplay from "./Components/BlogsDisplay/BlogsDisplay";
 import Blog from "./Components/Blog/Blog";
 import Landing from "./Components/Landing/Landing";
 import Sidebar from "./Components/Sidebar/Sidebar";
+import SalesPage from "./UnusedStuffs/SalesPage/SalesPage";
 import {
   withRouter,
-  BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 class App extends Component {
@@ -29,7 +28,7 @@ class App extends Component {
 
   render() {
     return (
-    <Box>
+    <Box display="flex">
       <Sidebar />
         <Switch>
           <Route path="/home">
@@ -40,6 +39,9 @@ class App extends Component {
           </Route>
           <Route path="/blog">
             <Blog />
+          </Route>
+          <Route path="/demo">
+            <SalesPage />
           </Route>
         </Switch>
     </Box>

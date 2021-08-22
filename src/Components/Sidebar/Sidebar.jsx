@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Box, SwipeableDrawer, List } from "@material-ui/core";
+import { Box, Drawer, List } from "@material-ui/core";
 import { Text, LI, Icon } from "./SidebarStyle";
 
 class Sidebar extends Component {
@@ -21,9 +21,9 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <Box>
-        {!this.state.left && <Icon onClick={this.toggleDrawer} />}
-        <SwipeableDrawer
+      <div>
+        <Icon onClick={this.toggleDrawer} />
+        <Drawer
           anchor={"left"}
           open={this.state.left}
           onClose={this.toggleDrawer}
@@ -37,8 +37,8 @@ class Sidebar extends Component {
               <Text>Blogs</Text>
             </LI>
           </List>
-        </SwipeableDrawer>
-      </Box>
+        </Drawer>
+      </div>
     );
   }
 }
