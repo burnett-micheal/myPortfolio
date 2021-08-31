@@ -15,6 +15,21 @@ const Text = styled.div`
   padding-right: 5vw;
   padding-bottom: 2vw;
   text-align: center;
+  color: #333300;
+`;
+
+const Link = styled.div`
+  font-size: 1.3vw;
+  padding-top: 1vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 0.4vw;
+  color: #0645ad;
+  text-align: center;
+  :hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 `;
 
 const Image = styled.img`
@@ -31,4 +46,4 @@ const Video = styled.video`
   display: block;
 `;
 
-export { Title, Text, Image, Video };
+export { Title, Text, Image, Video, Link };

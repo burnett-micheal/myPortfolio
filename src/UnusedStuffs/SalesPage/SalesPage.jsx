@@ -7,13 +7,12 @@ import {
   Text,
   TopContainer,
 } from "./SalesPageStyle";
-import img0 from "../../Assets/image/b.jpg";
-import img1 from "../../Assets/image/HostAFan.jpg";
-import img2 from "../../Assets/image/Screenshot_3.png";
+import img0 from "../../Assets/Images/FacePic.png";
+import img1 from "../../Assets/Images/HostAFan.jpg";
 
 class SalesPage extends Component {
   state = {
-    images: [img0, img1, img2],
+    images: [img0, img1],
     imgIndex: 0,
   };
   moveLeft = () => {

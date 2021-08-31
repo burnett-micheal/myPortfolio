@@ -1,15 +1,12 @@
-import HostAFan from "../Assets/image/HostAFan.jpg";
+import HostAFan from "../Assets/Images/HostAFan.jpg";
 
 const blogs = Object.freeze({
-    Host_A_Fan: {
+    A_Day_In_The_Life_At_Host_A_Fan: {
         thumbnailImage: HostAFan, 
-        description: `
-        An article discussing my day to day at Host A Fan, and what I achieved while working there.
-        `,
+        description: `Article about my time working at Host A Fan. Additionally, it discusses what I developed and some of the tools I used while working there.`,
+        tags: ["IT", "Web Development", "Work Experience", "Portfolio"],
         article: [
-            {text: `
-            --- https://hostafan.azurewebsites.net/ ---
-            `},
+            {link: {text: "Host A Fan Website", url: "https://hostafan.azurewebsites.net/"}},
             {text: `
             My days typically started out at 11am, hopping on the computer for a zoom meeting. Here the entire team would go over what they had accomplished, what they would accomplish, and any slowdowns or pitfalls they had run into in the process. This helped keep the entire team up to date on all the developments for the project, and was a convenient time for the developers to discuss changes in schedule, expectations, or to request a code review.
             `},
@@ -39,6 +36,36 @@ const blogs = Object.freeze({
             `},
             {text: `
             Misc: Git Bash, Postman
+            `},
+        ],
+    },
+    Learning_To_Use_Azure_Storage: {
+        thumbnailImage: HostAFan, 
+        description: `After my work at Host A Fan I was inspired to use similar tools on my own projects. This article is about how I became interested in the platform, my current experience, and some tips and tricks I learned along the way.`,
+        tags: ["IT", "Web Development", "Portfolio"],
+        article: [
+            {text: `
+            Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder 
+            `},
+        ],
+    },
+    My_Evolutions_Of_Pathfinding: {
+        thumbnailImage: HostAFan, 
+        description: `Pathfinding is a huge hurdle to get over when learning game development. This article discusses my current history developing pathfinders, how each one works, and potential improvements or overhauls I may try moving forward.`,
+        tags: ["IT", "Game Development", "Portfolio"],
+        article: [
+            {text: `
+            Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder 
+            `},
+        ],
+    },
+    JP_Morgan_Chase_Virtual_Internship: {
+        thumbnailImage: HostAFan, 
+        description: `Virtual Internship via a program on 'The Forage', refactored code to produce an up to date line graph on stocks and there relationships. Made use of Python, Typescript, and React.`,
+        tags: ["IT", "Web Development", "Portfolio"],
+        article: [
+            {text: `
+            Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder 
             `},
         ],
     },

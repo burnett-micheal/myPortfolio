@@ -1,24 +1,39 @@
 import React, { Component } from "react";
 import { Box } from "@material-ui/core";
 import blogs from "../../Data/blogs";
-import { Title, Text, Image, Video } from "./BlogStyle";
+import { Title, Text, Image, Video, Link } from "./BlogStyle";
 
 class Blog extends Component {
   state = { article: null };
 
+  //Recognized A Tiny Bug, If The Text Is Not Large Enough To Take Up One Line
+  //The Blog Will Be Displayed Toward The Left Side Of The Screen
   componentDidMount() {
     const blogTitle = window.location.pathname.split("/").filter((i) => {
       return i !== "";
     })[1];
     const spaceTitle = blogTitle.replace(/_/g, " ");
     document.title = spaceTitle;
-    debugger;
+
     const articleElements = blogs[blogTitle].article;
     const article = [<Title key={-1}>{spaceTitle}</Title>];
 
     articleElements.forEach((element, i) => {
       for (const [key, value] of Object.entries(element)) {
         switch (key) {
+          case "link":
+            article.push(
+              <Link
+                to={value.url}
+                onClick={() => {
+                  window.location = value.url;
+                }}
+                key={i}
+              >
+                {value.text}
+              </Link>
+            );
+            break;
           case "text":
             article.push(<Text key={i}>{value}</Text>);
             break;

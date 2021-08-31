@@ -13,7 +13,8 @@ const LandingCard = styled(Card)`
 
 const Title = styled.div`
   text-align: center;
-  margin-bottom: 1.5vw;
+  margin-top: 0.75vw;
+  margin-bottom: 0.75vw;
   font-size: 2.6vw;
   color: #000033;
 `;
