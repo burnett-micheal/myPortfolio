@@ -1,4 +1,8 @@
 import HostAFan from "../Assets/Images/HostAFan.jpg";
+import PathfindPost from "../Components/BlogPosts/Pathfinding/PathfindPost";
+import AzurePic from "../Assets/Images/azureSquare.jpg";
+import JPMorganPic from "../Assets/Images/JP-Morgan.jpg";
+import PathfindPic from "../Assets/Images/pathfinding.png";
 
 const blogs = Object.freeze({
     A_Day_In_The_Life_At_Host_A_Fan: {
@@ -40,32 +44,33 @@ const blogs = Object.freeze({
         ],
     },
     Learning_To_Use_Azure_Storage: {
-        thumbnailImage: HostAFan, 
+        thumbnailImage: AzurePic, 
         description: `After my work at Host A Fan I was inspired to use similar tools on my own projects. This article is about how I became interested in the platform, my current experience, and some tips and tricks I learned along the way.`,
         tags: ["IT", "Web Development", "Portfolio"],
         article: [
             {text: `
-            Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder 
+            I'm sorry to say that this post is still under development, this site is still in the early phases of development and will be updated regularly. Feel free to check in soon for any updates to this post. Thank you for your continued patience and understanding.
             `},
         ],
     },
     My_Evolutions_Of_Pathfinding: {
-        thumbnailImage: HostAFan, 
+        thumbnailImage: PathfindPic, 
         description: `Pathfinding is a huge hurdle to get over when learning game development. This article discusses my current history developing pathfinders, how each one works, and potential improvements or overhauls I may try moving forward.`,
         tags: ["IT", "Game Development", "Portfolio"],
         article: [
             {text: `
-            Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder 
+            This post is still under development, however, feel free to use the pathfinding simulator below.
             `},
+            {component: <PathfindPost />}
         ],
     },
     JP_Morgan_Chase_Virtual_Internship: {
-        thumbnailImage: HostAFan, 
+        thumbnailImage: JPMorganPic, 
         description: `Virtual Internship via a program on 'The Forage', refactored code to produce an up to date line graph on stocks and there relationships. Made use of Python, Typescript, and React.`,
         tags: ["IT", "Web Development", "Portfolio"],
         article: [
             {text: `
-            Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder Place Holder 
+            I'm sorry to say that this post is still under development, this site is still in the early phases of development and will be updated regularly. Feel free to check in soon for any updates to this post. Thank you for your continued patience and understanding.
             `},
         ],
     },

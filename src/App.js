@@ -4,6 +4,7 @@ import BlogsDisplay from "./Components/BlogsDisplay/BlogsDisplay";
 import Blog from "./Components/Blog/Blog";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Portfolio from "./Components/Portfolio/Portfolio";
+import PathfindPost from "./Components/BlogPosts/Pathfinding/PathfindPost";
 import {
   withRouter,
   Switch,
@@ -30,6 +31,9 @@ class App extends Component {
     <Box display="flex">
       <Sidebar />
         <Switch>
+          <Route path="/pathfinding">
+            <PathfindPost />
+          </Route>
           <Route path="/blogs">
             <BlogsDisplay />
           </Route>

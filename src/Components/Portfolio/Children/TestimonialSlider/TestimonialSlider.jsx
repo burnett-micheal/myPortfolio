@@ -28,7 +28,7 @@ class TestimonialSlider extends Component {
             {testimonial?.company}
           </Text>
         </StyledBox>
-        <Text center color="#F3F9FF" size="2.5vw" m="4vw">
+        <Text center color="#F3F9FF" size="2.2vw" m="4vw">
           {testimonial?.testimonial}
         </Text>
       </FlexBox>

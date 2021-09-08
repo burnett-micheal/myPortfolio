@@ -50,6 +50,10 @@ const SearchContainer = styled.div`
   margin-left: 37vw;
 `;
 
+const SearchBtn = styled(Button)`
+  width: 8vw;
+`;
+
 const SearchTags = styled.div`
   position: fixed;
   background: linear-gradient(-45deg, #dfecf1, #f6f8f9);
@@ -82,6 +86,7 @@ export {
   TextSection,
   BlogBox,
   SearchBar,
+  SearchBtn,
   SearchContainer,
   SearchTags,
   TagsButton,

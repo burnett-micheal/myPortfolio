@@ -53,12 +53,11 @@ class Portfolio extends Component {
   }
 
   slideLoop = () => {
-    let timer = setInterval(this.slide, 10000);
+    let timer = setInterval(this.slide, 15000);
   };
 
   slide = () => {
     this.blogSlide();
-    this.testSlide();
   };
 
   mapText = (text, index) => {
@@ -271,7 +270,7 @@ class Portfolio extends Component {
         <FlexBox ml="2.5vw" mr="2.5vw" mt="3.5vw">
           <StyledBox>
             <Img src={SelfPicture} alt="..." mt="2vw" />
-            <Img src={SelfPicture} alt="..." mt="1.3vw" mb="2vw" />
+            {/* <Img src={SelfPicture} alt="..." mt="1.3vw" mb="2vw" /> */}
           </StyledBox>
           <StyledBox pl="3vw" pr="3vw" pb="3vw">
             <Text center size="5vw" color="#000E57">
@@ -298,7 +297,14 @@ class Portfolio extends Component {
               integrate into the coding web in my head.
             </Text>
 
-            <ContactButton variant="contained" color="primary">
+            <ContactButton
+              variant="contained"
+              color="primary"
+              onClick={(e) => {
+                window.open("mailto:burnett.micheal.business@gmail.com");
+                e.preventDefault();
+              }}
+            >
               <Text size="2.5vw">Get In Contact With Me</Text>
             </ContactButton>
           </StyledBox>

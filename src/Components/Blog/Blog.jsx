@@ -42,6 +42,8 @@ class Blog extends Component {
             break;
           case "video":
             article.push(<Video key={i} src={value} />);
+          case "component":
+            article.push(value);
             break;
           default:
             throw new Error(key + " is not a valid blog element");

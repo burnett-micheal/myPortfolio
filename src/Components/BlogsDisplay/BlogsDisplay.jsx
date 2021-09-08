@@ -9,6 +9,7 @@ import {
   BlogBox,
   SearchBar,
   SearchContainer,
+  SearchBtn,
   SearchTags,
   TagsButton,
   TagButton,
@@ -255,7 +256,7 @@ class BlogsDisplay extends Component {
               }
             }}
           />
-          <Button
+          <SearchBtn
             variant="contained"
             color="primary"
             onClick={() => {
@@ -263,7 +264,7 @@ class BlogsDisplay extends Component {
             }}
           >
             Search
-          </Button>
+          </SearchBtn>
         </SearchContainer>
         <TagsButton
           variant="contained"
