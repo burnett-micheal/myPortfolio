@@ -1,0 +1,26 @@
+.Testimonials_testimonials{
+  grid-area: 42 / 5 / 58 / 22;
+}
+
+.Testimonials_container{
+  padding: 1.5vw;
+}
+
+.Testimonials_container > .title{
+  text-align: center;
+  font-size: 2.5vw;
+  color: #09203f;
+}
+
+.Testimonials_container > .testimonial{
+  padding: 1vw;
+  /* text-align: center; */
+  font-size: 1.75vw;
+  color: #333333;
+}
+
+.Testimonials_testimonials > .line{
+  background-color: #09203f;
+  width: 100%;
+  height: 1px;
+}

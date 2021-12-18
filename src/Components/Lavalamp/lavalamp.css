@@ -1,0 +1,17 @@
+.lamp {
+}
+
+.left {
+  grid-area: 10 / 1 / 101 / 5;
+  box-shadow: 0.1vw 0px 0.2vw #888888;
+}
+
+.right {
+  grid-area: 10 / 22 / 101 / 26;
+  box-shadow: -0.1vw 0px 0.2vw #888888;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}

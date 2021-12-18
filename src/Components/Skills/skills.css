@@ -1,0 +1,254 @@
+.Skills_skills{
+  grid-area: 10 / 5 / 29 / 22; 
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.Skills_section-title{
+  font-size: 2.15vw;
+  color: #09203f;
+  margin-top: 3vw;
+}
+
+.Skills_line{
+  height: 0.05vw;
+  width: 100%;
+  background-color: black;
+}
+
+.Skills_bar-container{
+  display: flex;
+  height: 2vw;
+  margin-top: 0.5vw;
+  background-color: #EDEDED;
+}
+
+.Skills_bar-title{
+  font-size: 1.5vw;
+  text-align: center;
+  background-color: #47D9EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: inherit;
+  width: 15%;
+  color: #ffffff;
+}
+
+.Skills_bar{
+  height: inherit;
+  background-color: #1AC4D9;
+}
+
+.Skills__bar-container{
+  height: inherit;
+  width: 85%;
+}
+
+.Skills_bar-percent{
+  font-size: 1.25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  color: #434343;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.Skills_cards-container{
+  display: flex;
+  gap: 27.5%;
+  padding-top: 3vw;
+  justify-content: center;
+}
+
+.Skills_card{
+  /* box-shadow: 5px 10px 8px #888888; */
+  width: 15%;
+}
+.Skills_card-title{
+  text-align: center;
+  font-size: 2.15vw;
+  padding: 0.1vw;
+  color: #09203f;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.Skills_card-text{
+  text-align: center;
+  font-style: italic;
+  font-size: 2vw; 
+  padding: 0.1vw;
+  color: #434343;
+  opacity: 0;
+}
+
+.Skills_card-img{
+  width: 100%;
+  height: auto;
+  opacity: 0;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@keyframes flipIn {
+  0%   {transform: rotateY(120deg); opacity: 0;}
+  100% {transform: rotateY(0deg); opacity: 1;}
+}
+
+.Skills_flipIn-1{
+  animation-name: flipIn;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_flipIn-2{
+  animation-name: flipIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_flipIn-3{
+  animation-name: flipIn;
+  animation-duration: 0.5s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@keyframes fadeIn {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.Skills_fadeIn-1{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_fadeIn-2{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_fadeIn-3{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@keyframes widthIn-10 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 10%;}
+}
+
+@keyframes widthIn-20 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 20%;}
+}
+
+@keyframes widthIn-30 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 30%;}
+}
+
+@keyframes widthIn-40 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 40%;}
+}
+
+@keyframes widthIn-50 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 50%;}
+}
+
+@keyframes widthIn-60 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 60%;}
+}
+
+@keyframes widthIn-70 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 70%;}
+}
+
+@keyframes widthIn-80 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 80%;}
+}
+
+@keyframes widthIn-90 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 90%;}
+}
+
+@keyframes widthIn-100 {
+  0%   {opacity: 0; width: 0%;}
+  100% {opacity: 1; width: 100%;}
+}
+
+.Skills_widthIn-10{
+  animation-name: widthIn-10;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_widthIn-20{
+  animation-name: widthIn-20;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_widthIn-30{
+  animation-name: widthIn-30;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_widthIn-40{
+  animation-name: widthIn-40;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_widthIn-50{
+  animation-name: widthIn-50;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_widthIn-60{
+  animation-name: widthIn-60;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_widthIn-70{
+  animation-name: widthIn-70;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_widthIn-80{
+  animation-name: widthIn-80;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_widthIn-90{
+  animation-name: widthIn-90;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.Skills_widthIn-100{
+  animation-name: widthIn-100;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
