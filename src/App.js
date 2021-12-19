@@ -10,28 +10,61 @@ import "./Styles/grid.css";
 const scroll2Render = (scrollPos) => {
   const scrollComps = [
     { render: "skills", atScroll: 100 },
-    { render: "projects", atScroll: 100 }, // 2000
+    // { render: "projects", atScroll: 100 }, // 2000
   ];
   const components2Render = [];
   scrollComps.forEach(scrollComp => { if (scrollComp.atScroll < scrollPos) components2Render.push(scrollComp.render) });
   return components2Render;
 };
 
+function BigWindow(props) {
+  return(
+    <React.Fragment>
+      <Title />
+      {props.showSkills && <Skills />}
+      
+      {/* Add Animations For Others At A Later Date */}
+      <Projects />
+      <Testimonials />
+      <Contact />
+    </React.Fragment>
+  );
+}
+
+function SmallWindow(props) {
+  return(
+    <div style={{textAlign: "center", fontSize: "5vw", gridArea: "1 / 2 / 10 / 25"}}>
+      Mobile Version Is Still Under Development, If Possible, Please View This Site On A Laptop Or Desktop
+    </div>
+  );
+}
+
 class App extends Component {
-  state = {
-    render: {
-      count: 0,
-      skills: false,
-      projects: false,
-    }
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      smallWindow: false,
+      render: {
+        count: 0,
+        skills: false,
+      }
+    };
+    this.onResize = this.onResize.bind(this);
+  }
+
+
+  componentWillMount() {
+    this.onResize();
+  }
 
   componentDidMount() {
     window.addEventListener("scroll", this.updateScroll);
+    window.addEventListener("resize", this.onResize);
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.updateScroll);
+    window.removeEventListener("resize", this.onResize);
   }
 
   updateScroll = () => {
@@ -46,14 +79,37 @@ class App extends Component {
       });
     }
   };
+
+  getWindowWidth() {
+    return Math.max(
+      document.documentElement.clientWidth,
+      window.innerWidth || 0
+    );
+  }
+
+  onResize() {
+    const minWidth = 1078;
+    const width = document.documentElement.clientWidth;
+
+    if(width < minWidth && !this.state.smallWindow){
+      this.setState(prevState => {
+        prevState.smallWindow = true;
+        return prevState;
+      });
+    }
+
+    if(width >= minWidth && this.state.smallWindow){
+      this.setState(prevState => {
+        prevState.smallWindow = false;
+        return prevState;
+      });
+    }
+  }
   render() {
     return (
       <div className="parent">
-        <Title />
-        {this.state.render.skills && <Skills />}
-        {this.state.render.projects && <Projects />}
-        <Testimonials />
-        <Contact />
+        {this.state.smallWindow ? <SmallWindow /> : <BigWindow showSkills={this.state.render.skills}/>}
+
       </div>
     );
   }
