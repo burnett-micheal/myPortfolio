@@ -60,6 +60,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener("scroll", this.updateScroll);
     window.addEventListener("resize", this.onResize);
+    document.title = "Mike Develops";
   }
 
   componentWillUnmount() {
