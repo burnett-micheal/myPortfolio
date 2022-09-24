@@ -1,6 +1,4 @@
-import React, { Component, useRef, useEffect } from "react";
-import YesMusicImg from "../../Assets/Music_Icon.png";
-import NoMusicImg from "../../Assets/No_Music_Icon.png";
+import React, { useRef, useEffect } from "react";
 import Lofi from "../../Assets/lofi.mp3";
 import AudioVisualizer from "./audioVisualizer";
 import "./title.css";
