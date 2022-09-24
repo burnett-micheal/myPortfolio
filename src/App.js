@@ -4,6 +4,9 @@ import Skills from "./Components/Skills/Skills";
 import Projects from "./Components/Projects/Projects";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Contact from "./Components/Contact/Contact";
+import netLogo from "./Assets/.Net_Core_Logo.png";
+import sqlLogo from "./Assets/SQL_Server_Logo.png";
+import reactLogo from "./Assets/React_Logo.png";
 import "./Styles/global.css";
 import "./Styles/grid.css";
 
@@ -18,11 +21,11 @@ const scroll2Render = (scrollPos) => {
 };
 
 function BigWindow(props) {
-  return(
+  return (
     <React.Fragment>
       <Title />
       {props.showSkills && <Skills />}
-      
+
       {/* Add Animations For Others At A Later Date */}
       <Projects />
       <Testimonials />
@@ -32,8 +35,8 @@ function BigWindow(props) {
 }
 
 function SmallWindow(props) {
-  return(
-    <div style={{textAlign: "center", fontSize: "5vw", gridArea: "1 / 2 / 10 / 25"}}>
+  return (
+    <div style={{ textAlign: "center", fontSize: "5vw", gridArea: "1 / 2 / 10 / 25" }}>
       Mobile Version Is Still Under Development, If Possible, Please View This Site On A Laptop Or Desktop
     </div>
   );
@@ -61,6 +64,10 @@ class App extends Component {
     window.addEventListener("scroll", this.updateScroll);
     window.addEventListener("resize", this.onResize);
     document.title = "Mike Develops";
+    const img = new Image();
+    img.src = netLogo;
+    img.src = sqlLogo;
+    img.src = reactLogo;
   }
 
   componentWillUnmount() {
@@ -92,14 +99,14 @@ class App extends Component {
     const minWidth = 1078;
     const width = document.documentElement.clientWidth;
 
-    if(width < minWidth && !this.state.smallWindow){
+    if (width < minWidth && !this.state.smallWindow) {
       this.setState(prevState => {
         prevState.smallWindow = true;
         return prevState;
       });
     }
 
-    if(width >= minWidth && this.state.smallWindow){
+    if (width >= minWidth && this.state.smallWindow) {
       this.setState(prevState => {
         prevState.smallWindow = false;
         return prevState;
@@ -109,7 +116,7 @@ class App extends Component {
   render() {
     return (
       <div className="parent">
-        {this.state.smallWindow ? <SmallWindow /> : <BigWindow showSkills={this.state.render.skills}/>}
+        {this.state.smallWindow ? <SmallWindow /> : <BigWindow showSkills={this.state.render.skills} />}
 
       </div>
     );

@@ -1,19 +1,19 @@
-.Projects_background{
-  grid-area: 29 / 1 / 42 / 26; 
+.Projects_background {
+  grid-area: 36 / 1 / 50 / 26;
   background-color: #F1FAFF;
 }
 
-.Projects_projects{
-  grid-area: 29 / 5 / 42 / 22; 
+.Projects_projects {
+  grid-area: 36 / 2 / 49 / 25;
 }
 
-.Projects_title{
+.Projects_title {
   font-size: 2.15vw;
   text-decoration: underline;
   color: #09203f;
   text-align: center;
   margin-top: 1vw;
-  margin-bottom: 1vw;
+  margin-bottom: 3vw;
 }
 
 .Projects_projectsContainer {
@@ -24,35 +24,36 @@
   flex-wrap: wrap;
 }
 
-.Projects_card{
-  width:30%;
+.Projects_card {
+  width: 20%;
+  margin-bottom: 1vw;
   position: relative;
 }
 
-.Projects_cardOverlay{
+.Projects_cardOverlay {
   left: 0;
-  top: 0; 
-  position: absolute; 
-  width: 100%; 
-  height: 100%; 
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: white;
   opacity: 0;
   transition: opacity 0.5s;
 }
 
-.Projects_cardOverlay:hover{
+.Projects_cardOverlay:hover {
   opacity: 1;
 }
 
-.Projects_cardOverlay > .title{
+.Projects_cardOverlay>.title {
   text-align: center;
-   margin-top: 15%; 
-   font-size: 2vw; 
-   color: #09203f;
+  margin-top: 15%;
+  font-size: 2vw;
+  color: #09203f;
 }
 
-.Projects_cardOverlay > .highlight {
-  text-align: center; 
-  font-size: 1.5vw; 
+.Projects_cardOverlay>.highlight {
+  text-align: center;
+  font-size: 1.5vw;
   color: #e31b6d;
 }
